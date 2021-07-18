@@ -1,0 +1,324 @@
+/* Setting variables for colors */
+:root {
+    --dark-blue: rgb(17, 25, 44);
+    --light-green: rgb(189, 228, 189);
+    --blue-gray: rgba(36, 85, 94, 0.938);
+  }
+  
+  html {
+      /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+    padding: 0 0 40px 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.625rem;
+    color: var(--heliotrope);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    /* 5rem = 50px (5 * 10px) */
+    font-size: 5rem;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+    color: var(--blue-gray);
+    line-height: 1.5;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  p {
+    font-size: 1.6rem;
+  }
+  
+  /* This controls the margin for the 'Section' which contains 'About Me', 'Work', 'Contact Me'. */
+  section {
+    margin: 30px 50px 10px 180px;
+  }
+  
+  /* It acts as a flexbox for the header. */
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-blue);
+    padding: 15px 40px 15px 0px;
+  }
+  
+  /* This controls the font and sizing of the title box of the website. */
+  .website-name {
+    color: var(--dark-blue);
+    background-color: var(--light-green);
+    padding: 15px 15px 15px 100px;
+  }
+  
+  /* This controls the size of navigation bar. */
+  .navbar {
+    width: auto;
+    padding: 0 50px 0 0;
+  }
+  
+  /* It allows navigation bar to be inline. */
+  .navbar-list {
+      display: inline;
+      padding: 0px 20px;
+      font-weight: bold;
+  }
+  
+  /* It controls the font of the navigation bar and stays as original even hyperlink is activated. */
+  .navbar-font, .navbar-font:visited {
+    color:var(--light-green);
+    text-decoration: none;
+    border-bottom: 5px solid var(--light-green);
+    padding-bottom: 4px;
+    font-size: 2rem;
+  }
+  
+  /* Class selectors for the Main Image. */
+  .main-image-section {
+    display: block;
+    width: 100%;
+    height: 600px;
+  }
+  
+  /* This controls the size of an image. */
+  .windtunnel-aircraft {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* This sets the position and other properties of subtitle in main image. */
+  .subtitle {
+    position:relative;
+    bottom: 150px;
+    left: 100px;
+    width: 400px;
+    padding: 20px 30px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 2.5rem;
+    border: 2px solid white;
+    outline: 2px solid red;
+    cursor: pointer;
+  }
+  
+  /* Subtitle highlights with different color as it is hovered. */
+  .subtitle:hover {
+    background-color: orange;
+    border: 2px solid black;
+    outline: 2px solid orange;
+  }
+  
+  /* Class selectors for 'About Me' */
+  /* ------------------------------ */
+  
+  .about-me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    padding: 20px 0px;
+  }
+  
+  /* This sizes and locates the aside section of 'About Me', 'Work', and 'Contact Me' */
+  .aside {
+    box-sizing: border-box;
+    width: 200px;
+    height: auto;
+    text-align: right;
+    padding: 0 30px 0 0;
+    border-right: 8px solid var(--blue-gray);
+    margin-right: 50px;
+  }
+  
+  /* It sizes the content portion of the 'About Me' and 'Work' */
+  .content {
+    height: auto;
+    margin: 0 0 0 50px;
+    flex-basis: 70%;
+  }
+  
+  /* It controls the font and color of 'About Me' content */
+  .about-me-font {
+    font-size: 2rem;
+    color: var(--blue-gray);
+  }
+  
+  /* Class selectors for 'Work' */
+  /* --------------------------- */
+  .work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    padding: 20px 0px;
+  }
+  
+  /* Assigning the content portion of 'Work' as a Flexbox to control its flex-items. */
+  .work-content-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* It acts as a box locator which will be used to insert image that fits into this part. */
+  .work-content-top {
+    position: relative;
+    text-align: left;
+    color: var(--blue-gray);
+    border: 10px solid var(--light-green);
+    margin: 10px 0px;
+  }
+  
+  /* It controls the size of the image */
+  .work-image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: .8s ease;
+    backface-visibility: hidden;
+  }
+  
+  /* Opacity changes back to original when the pointer is hovered on the image. */
+  .hover-opacity:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  /* It controls the position and sizing of the image subtitle */
+  .image-subtitle {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    padding: 10px 10px;
+    text-align: left;
+    background-color: var(--light-green);
+    font-size: 2rem;
+  }
+  
+  /* Assigning the bottom of the content portion of 'Work' as a Flexbox to control its flex-items. */
+  .work-content-bottom-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  
+  /* It controls the properties of flex-items inside '.work-content-bottom-flexbox' */
+  .work-content-bottom {
+    position: relative;
+    width:49%;
+    height: 250px;
+    margin:10px 0px;
+    border: 10px solid var(--light-green);
+    text-align: left;
+    color: var(--blue-gray);
+  }
+  
+  /* Class selectors for 'Contact Me' */
+  /* --------------------------------- */
+  
+  .contact-me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    padding: 20px 0px;
+  }
+  
+  /* It sizes the content portion of the 'Contact Me' */
+  .contact-me-content {
+    flex-basis: 70%;
+    height: auto;
+    align-self: center;
+  }
+  
+  /* Assigning '.contact-me-content' as a Flexbox to control its flex-items. */
+  .contact-me-content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* It controls the list format */
+  .contact-me-list {
+    display: inline;
+    padding: 0px 20px;
+    font-weight: bold;
+  }
+  
+  /* It controls the list font and color */
+  .contact-me-list-font, .contact-me-list-font:visited {
+  color: var(--blue-gray);
+  text-decoration: none;
+  border-bottom: 5px solid var(--blue-gray);
+  padding-bottom: 4px;
+  font-size: 2rem;
+  }
+  
+  /* Did not have enough time to complete. */
+  @media screen and (max-width: 992px) {
+    .header-container {
+      background-color: var(--light-green);
+    }
+  
+    .website-name {
+      color: var(--light-green);
+      background-color: var(--dark-blue);
+    }
+  
+    .navbar-font, .navbar-font:visited {
+      color:var(--dark-blue);
+      text-decoration: none;
+      border-bottom: 5px solid var(--dark-blue);
+      align-items: stretch;
+      margin: 20px;
+      font-size: 1rem;
+    }
+  
+  }
+  
+  /* Did not have enough time to complete. */
+  @media screen and (max-width: 768px) {
+    
+  }
